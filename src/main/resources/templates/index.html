@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" th:object="${kayak}">
+        <label htmlfor="kName">Name: </label>
+        <input type="text" th:field="*{kName}" id="kName" name="kName" />
+        <br>
+        <label htmlfor="owner">Owner: </label>
+        <input type="text" th:field="*{owner}" id="owner" name="owner"/>
+        <br>
+        <label htmlfor="value">Value: </label>
+        <input type="number" th:field="*{value}" name="value" id="value"/>
+        <br>
+        <label htmlfor="makeModel">Make/Model: </label>
+        <input type="text" th:field="*{makeModel}" id="makeModel" name="makeModel" />
+        <br>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
